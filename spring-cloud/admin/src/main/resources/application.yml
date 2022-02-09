@@ -1,0 +1,18 @@
+server.port: 7007
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    initialInstanceInfoReplicationIntervalSeconds: 5
+    registryFetchIntervalSeconds: 5
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 5
+spring.application.name: admin
+management.endpoint.health.show-details: "ALWAYS"
+management.endpoints.web.exposure.include: "*"
+logging.file.name: ./log/${spring.application.name}.log
+---
+spring.profiles: docker
+server.port: 8080
+eureka.client.serviceUrl.defaultZone: http://eureka:8761/eureka/

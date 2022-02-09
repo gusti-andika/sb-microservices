@@ -1,0 +1,16 @@
+spring.application.name: config-server
+server.port: 7008
+spring.cloud.config.server.native.searchLocations: file:${PWD}/config-repo
+# WARNING: Exposing all management endpoints over http should only be used during development, must be locked down in production!
+management.endpoint.health.show-details: "ALWAYS"
+management.endpoints.web.exposure.include: "*"
+
+logging:
+  level:
+    root: info
+  file:
+    name: ./log/${spring.application.name}.log
+---
+spring.profiles: docker
+server.port: 8082
+spring.cloud.config.server.native.searchLocations: file:/config-repo

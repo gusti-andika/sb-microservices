@@ -1,0 +1,186 @@
+2022-02-09 13:31:19.445  INFO 707 --- [Test worker] s.m.m.c.r.ReviewServiceApplicationTests  : Starting ReviewServiceApplicationTests using Java 1.8.0_312 on MTNB1007 with PID 707 (started by andika in /mnt/d/development/Hands-On-Microservices-with-Spring-Boot-and-Spring-Cloud/Chapter09/microservices/review-service)
+2022-02-09 13:31:19.451 DEBUG 707 --- [Test worker] s.m.m.c.r.ReviewServiceApplicationTests  : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-02-09 13:31:19.451  INFO 707 --- [Test worker] s.m.m.c.r.ReviewServiceApplicationTests  : No active profile set, falling back to default profiles: default
+2022-02-09 13:31:19.553  WARN 707 --- [Test worker] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 68:18]
+2022-02-09 13:31:26.212  INFO 707 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-09 13:31:27.564  INFO 707 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1295 ms. Found 1 JPA repository interfaces.
+2022-02-09 13:31:28.834  INFO 707 --- [Test worker] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-02-09 13:31:28.948  INFO 707 --- [Test worker] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-02-09 13:31:29.593  INFO 707 --- [Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ec69a86-34f7-3ea3-bb4b-e8d9cd75cbd8
+2022-02-09 13:31:31.573  INFO 707 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-09 13:31:31.796  INFO 707 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-09 13:31:31.837  INFO 707 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'bindersHealthContributor' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$BindersHealthContributor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-09 13:31:31.859  INFO 707 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'bindersHealthIndicatorListener' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$BindersHealthIndicatorListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-09 13:31:32.006  INFO 707 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-09 13:31:32.146  INFO 707 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-09 13:31:32.157  INFO 707 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-09 13:31:32.187  INFO 707 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-09 13:31:35.634  INFO 707 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-09 13:31:36.108  INFO 707 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-02-09 13:31:37.565  INFO 707 --- [Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-02-09 13:31:38.794  INFO 707 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-09 13:31:40.447  INFO 707 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-09 13:31:40.797  INFO 707 --- [Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-02-09 13:31:46.745 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : create table reviews (id integer not null, author varchar(255), content varchar(255), product_id integer not null, review_id integer not null, subject varchar(255), version integer not null, primary key (id))
+2022-02-09 13:31:46.784 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : alter table reviews drop constraint if exists reviews_unique_idx
+2022-02-09 13:31:46.785 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : alter table reviews add constraint reviews_unique_idx unique (product_id, review_id)
+2022-02-09 13:31:46.796 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2022-02-09 13:31:46.803  INFO 707 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-09 13:31:46.886  INFO 707 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-09 13:31:46.995  INFO 707 --- [Test worker] s.m.m.c.review.ReviewServiceApplication  : Creates a jdbcScheduler with connectionPoolSize = 10
+2022-02-09 13:31:58.417  INFO 707 --- [Test worker] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-02-09 13:32:00.386  INFO 707 --- [Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2022-02-09 13:32:02.871  INFO 707 --- [Test worker] onConfiguration$FunctionBindingRegistrar : Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2022-02-09 13:32:06.680  INFO 707 --- [Test worker] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-02-09 13:32:06.803  INFO 707 --- [Test worker] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-02-09 13:32:07.683  WARN 707 --- [Test worker] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-02-09 13:32:09.751  INFO 707 --- [Test worker] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'review.input' has 1 subscriber(s).
+2022-02-09 13:32:09.782  INFO 707 --- [Test worker] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-02-09 13:32:09.783  INFO 707 --- [Test worker] o.s.i.channel.PublishSubscribeChannel    : Channel 'review.errorChannel' has 1 subscriber(s).
+2022-02-09 13:32:09.783  INFO 707 --- [Test worker] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2022-02-09 13:32:11.032  INFO 707 --- [Test worker] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 33705
+2022-02-09 13:32:12.037  INFO 707 --- [Test worker] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-02-09 13:32:13.041  INFO 707 --- [Test worker] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-02-09 13:32:13.133  INFO 707 --- [Test worker] s.m.m.c.r.ReviewServiceApplicationTests  : Started ReviewServiceApplicationTests in 56.857 seconds (JVM running for 61.84)
+2022-02-09 13:32:14.548 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select reviewenti0_.id as id1_0_, reviewenti0_.author as author2_0_, reviewenti0_.content as content3_0_, reviewenti0_.product_id as product_4_0_, reviewenti0_.review_id as review_i5_0_, reviewenti0_.subject as subject6_0_, reviewenti0_.version as version7_0_ from reviews reviewenti0_
+2022-02-09 13:32:16.823 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select reviewenti0_.id as id1_0_, reviewenti0_.author as author2_0_, reviewenti0_.content as content3_0_, reviewenti0_.product_id as product_4_0_, reviewenti0_.review_id as review_i5_0_, reviewenti0_.subject as subject6_0_, reviewenti0_.version as version7_0_ from reviews reviewenti0_
+2022-02-09 13:32:16.856 DEBUG 707 --- [reactor-http-epoll-4] s.m.u.h.GlobalControllerExceptionHandler : Returning HTTP status: 422 UNPROCESSABLE_ENTITY for path: /review, message: Invalid productId: -1
+2022-02-09 13:32:16.974 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select reviewenti0_.id as id1_0_, reviewenti0_.author as author2_0_, reviewenti0_.content as content3_0_, reviewenti0_.product_id as product_4_0_, reviewenti0_.review_id as review_i5_0_, reviewenti0_.subject as subject6_0_, reviewenti0_.version as version7_0_ from reviews reviewenti0_
+2022-02-09 13:32:17.117 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select reviewenti0_.id as id1_0_, reviewenti0_.author as author2_0_, reviewenti0_.content as content3_0_, reviewenti0_.product_id as product_4_0_, reviewenti0_.review_id as review_i5_0_, reviewenti0_.subject as subject6_0_, reviewenti0_.version as version7_0_ from reviews reviewenti0_ where reviewenti0_.product_id=?
+2022-02-09 13:32:17.132 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-02-09 13:32:17.169  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Process message created at 2022-02-09T13:32:17.148...
+2022-02-09 13:32:17.182  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Create review with ID: 1/1
+2022-02-09 13:32:17.261 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2022-02-09 13:32:17.534 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : insert into reviews (author, content, product_id, review_id, subject, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2022-02-09 13:32:17.540 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Author 1]
+2022-02-09 13:32:17.541 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Content 1]
+2022-02-09 13:32:17.542 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [1]
+2022-02-09 13:32:17.542 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [INTEGER] - [1]
+2022-02-09 13:32:17.542 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [Subject 1]
+2022-02-09 13:32:17.543 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [INTEGER] - [0]
+2022-02-09 13:32:17.544 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [INTEGER] - [1]
+2022-02-09 13:32:17.569 DEBUG 707 --- [Test worker] s.m.m.c.r.services.ReviewServiceImpl     : createReview: created a review entity: 1/1
+2022-02-09 13:32:17.569  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Message processing done!
+2022-02-09 13:32:17.578  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Process message created at 2022-02-09T13:32:17.578...
+2022-02-09 13:32:17.579  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Create review with ID: 1/2
+2022-02-09 13:32:17.579 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2022-02-09 13:32:17.580 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : insert into reviews (author, content, product_id, review_id, subject, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2022-02-09 13:32:17.581 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Author 2]
+2022-02-09 13:32:17.581 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Content 2]
+2022-02-09 13:32:17.582 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [1]
+2022-02-09 13:32:17.582 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [INTEGER] - [2]
+2022-02-09 13:32:17.583 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [Subject 2]
+2022-02-09 13:32:17.583 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [INTEGER] - [0]
+2022-02-09 13:32:17.583 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [INTEGER] - [2]
+2022-02-09 13:32:17.584 DEBUG 707 --- [Test worker] s.m.m.c.r.services.ReviewServiceImpl     : createReview: created a review entity: 1/2
+2022-02-09 13:32:17.585  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Message processing done!
+2022-02-09 13:32:17.585  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Process message created at 2022-02-09T13:32:17.585...
+2022-02-09 13:32:17.586  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Create review with ID: 1/3
+2022-02-09 13:32:17.586 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2022-02-09 13:32:17.587 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : insert into reviews (author, content, product_id, review_id, subject, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2022-02-09 13:32:17.588 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Author 3]
+2022-02-09 13:32:17.589 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Content 3]
+2022-02-09 13:32:17.589 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [1]
+2022-02-09 13:32:17.589 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [INTEGER] - [3]
+2022-02-09 13:32:17.590 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [Subject 3]
+2022-02-09 13:32:17.590 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [INTEGER] - [0]
+2022-02-09 13:32:17.590 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [INTEGER] - [3]
+2022-02-09 13:32:17.591 DEBUG 707 --- [Test worker] s.m.m.c.r.services.ReviewServiceImpl     : createReview: created a review entity: 1/3
+2022-02-09 13:32:17.592  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Message processing done!
+2022-02-09 13:32:17.593 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select reviewenti0_.id as id1_0_, reviewenti0_.author as author2_0_, reviewenti0_.content as content3_0_, reviewenti0_.product_id as product_4_0_, reviewenti0_.review_id as review_i5_0_, reviewenti0_.subject as subject6_0_, reviewenti0_.version as version7_0_ from reviews reviewenti0_ where reviewenti0_.product_id=?
+2022-02-09 13:32:17.593 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-02-09 13:32:17.621  INFO 707 --- [reactor-http-epoll-4] s.m.m.c.r.services.ReviewServiceImpl     : Will get reviews for product with id=1
+2022-02-09 13:32:17.669 DEBUG 707 --- [pool-3-thread-1] org.hibernate.SQL                        : select reviewenti0_.id as id1_0_, reviewenti0_.author as author2_0_, reviewenti0_.content as content3_0_, reviewenti0_.product_id as product_4_0_, reviewenti0_.review_id as review_i5_0_, reviewenti0_.subject as subject6_0_, reviewenti0_.version as version7_0_ from reviews reviewenti0_ where reviewenti0_.product_id=?
+2022-02-09 13:32:17.670 TRACE 707 --- [pool-3-thread-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-02-09 13:32:17.672 DEBUG 707 --- [pool-3-thread-1] s.m.m.c.r.services.ReviewServiceImpl     : getReviews: response size: 3
+2022-02-09 13:32:17.780 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select reviewenti0_.id as id1_0_, reviewenti0_.author as author2_0_, reviewenti0_.content as content3_0_, reviewenti0_.product_id as product_4_0_, reviewenti0_.review_id as review_i5_0_, reviewenti0_.subject as subject6_0_, reviewenti0_.version as version7_0_ from reviews reviewenti0_
+2022-02-09 13:32:17.829 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : delete from reviews where id=? and version=?
+2022-02-09 13:32:17.830 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-02-09 13:32:17.831 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [0]
+2022-02-09 13:32:17.842 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : delete from reviews where id=? and version=?
+2022-02-09 13:32:17.843 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [2]
+2022-02-09 13:32:17.843 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [0]
+2022-02-09 13:32:17.844 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : delete from reviews where id=? and version=?
+2022-02-09 13:32:17.845 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [3]
+2022-02-09 13:32:17.845 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [0]
+2022-02-09 13:32:17.856 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select count(*) as col_0_0_ from reviews reviewenti0_
+2022-02-09 13:32:17.864  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Process message created at 2022-02-09T13:32:17.864...
+2022-02-09 13:32:17.865  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Create review with ID: 1/1
+2022-02-09 13:32:17.865 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2022-02-09 13:32:17.867 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : insert into reviews (author, content, product_id, review_id, subject, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2022-02-09 13:32:17.867 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Author 1]
+2022-02-09 13:32:17.868 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Content 1]
+2022-02-09 13:32:17.868 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [1]
+2022-02-09 13:32:17.869 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [INTEGER] - [1]
+2022-02-09 13:32:17.869 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [Subject 1]
+2022-02-09 13:32:17.869 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [INTEGER] - [0]
+2022-02-09 13:32:17.870 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [INTEGER] - [4]
+2022-02-09 13:32:17.871 DEBUG 707 --- [Test worker] s.m.m.c.r.services.ReviewServiceImpl     : createReview: created a review entity: 1/1
+2022-02-09 13:32:17.871  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Message processing done!
+2022-02-09 13:32:17.872 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select count(*) as col_0_0_ from reviews reviewenti0_
+2022-02-09 13:32:17.873  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Process message created at 2022-02-09T13:32:17.873...
+2022-02-09 13:32:17.873  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Create review with ID: 1/1
+2022-02-09 13:32:17.874 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2022-02-09 13:32:17.875 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : insert into reviews (author, content, product_id, review_id, subject, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2022-02-09 13:32:17.875 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Author 1]
+2022-02-09 13:32:17.876 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Content 1]
+2022-02-09 13:32:17.876 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [1]
+2022-02-09 13:32:17.876 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [INTEGER] - [1]
+2022-02-09 13:32:17.877 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [Subject 1]
+2022-02-09 13:32:17.877 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [INTEGER] - [0]
+2022-02-09 13:32:17.878 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [INTEGER] - [5]
+2022-02-09 13:32:17.879  WARN 707 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2022-02-09 13:32:17.879 ERROR 707 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.REVIEWS_UNIQUE_IDX_INDEX_6 ON PUBLIC.REVIEWS(PRODUCT_ID, REVIEW_ID) VALUES 4"; SQL statement:
+insert into reviews (author, content, product_id, review_id, subject, version, id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+2022-02-09 13:32:17.884  INFO 707 --- [Test worker] o.h.e.j.b.internal.AbstractBatchImpl     : HHH000010: On release of batch it still contained JDBC statements
+2022-02-09 13:32:17.906 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select count(*) as col_0_0_ from reviews reviewenti0_
+2022-02-09 13:32:17.936 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select reviewenti0_.id as id1_0_, reviewenti0_.author as author2_0_, reviewenti0_.content as content3_0_, reviewenti0_.product_id as product_4_0_, reviewenti0_.review_id as review_i5_0_, reviewenti0_.subject as subject6_0_, reviewenti0_.version as version7_0_ from reviews reviewenti0_
+2022-02-09 13:32:17.939 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : delete from reviews where id=? and version=?
+2022-02-09 13:32:17.939 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [4]
+2022-02-09 13:32:17.940 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [0]
+2022-02-09 13:32:17.995 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select reviewenti0_.id as id1_0_, reviewenti0_.author as author2_0_, reviewenti0_.content as content3_0_, reviewenti0_.product_id as product_4_0_, reviewenti0_.review_id as review_i5_0_, reviewenti0_.subject as subject6_0_, reviewenti0_.version as version7_0_ from reviews reviewenti0_
+2022-02-09 13:32:17.997  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Process message created at 2022-02-09T13:32:17.997...
+2022-02-09 13:32:17.997  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Create review with ID: 1/1
+2022-02-09 13:32:17.998 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2022-02-09 13:32:17.999 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : insert into reviews (author, content, product_id, review_id, subject, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2022-02-09 13:32:18.000 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Author 1]
+2022-02-09 13:32:18.000 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Content 1]
+2022-02-09 13:32:18.001 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [1]
+2022-02-09 13:32:18.001 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [INTEGER] - [1]
+2022-02-09 13:32:18.002 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [Subject 1]
+2022-02-09 13:32:18.002 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [INTEGER] - [0]
+2022-02-09 13:32:18.002 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [INTEGER] - [6]
+2022-02-09 13:32:18.003 DEBUG 707 --- [Test worker] s.m.m.c.r.services.ReviewServiceImpl     : createReview: created a review entity: 1/1
+2022-02-09 13:32:18.004  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Message processing done!
+2022-02-09 13:32:18.005 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select reviewenti0_.id as id1_0_, reviewenti0_.author as author2_0_, reviewenti0_.content as content3_0_, reviewenti0_.product_id as product_4_0_, reviewenti0_.review_id as review_i5_0_, reviewenti0_.subject as subject6_0_, reviewenti0_.version as version7_0_ from reviews reviewenti0_ where reviewenti0_.product_id=?
+2022-02-09 13:32:18.006 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-02-09 13:32:18.007  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Process message created at 2022-02-09T13:32:18.007...
+2022-02-09 13:32:18.007  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Delete reviews with ProductID: 1
+2022-02-09 13:32:18.008 DEBUG 707 --- [Test worker] s.m.m.c.r.services.ReviewServiceImpl     : deleteReviews: tries to delete reviews for the product with productId: 1
+2022-02-09 13:32:18.009 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select reviewenti0_.id as id1_0_, reviewenti0_.author as author2_0_, reviewenti0_.content as content3_0_, reviewenti0_.product_id as product_4_0_, reviewenti0_.review_id as review_i5_0_, reviewenti0_.subject as subject6_0_, reviewenti0_.version as version7_0_ from reviews reviewenti0_ where reviewenti0_.product_id=?
+2022-02-09 13:32:18.009 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-02-09 13:32:18.012 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select reviewenti0_.id as id1_0_0_, reviewenti0_.author as author2_0_0_, reviewenti0_.content as content3_0_0_, reviewenti0_.product_id as product_4_0_0_, reviewenti0_.review_id as review_i5_0_0_, reviewenti0_.subject as subject6_0_0_, reviewenti0_.version as version7_0_0_ from reviews reviewenti0_ where reviewenti0_.id=?
+2022-02-09 13:32:18.012 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [6]
+2022-02-09 13:32:18.055 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : delete from reviews where id=? and version=?
+2022-02-09 13:32:18.055 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [6]
+2022-02-09 13:32:18.056 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [0]
+2022-02-09 13:32:18.057  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Message processing done!
+2022-02-09 13:32:18.058 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select reviewenti0_.id as id1_0_, reviewenti0_.author as author2_0_, reviewenti0_.content as content3_0_, reviewenti0_.product_id as product_4_0_, reviewenti0_.review_id as review_i5_0_, reviewenti0_.subject as subject6_0_, reviewenti0_.version as version7_0_ from reviews reviewenti0_ where reviewenti0_.product_id=?
+2022-02-09 13:32:18.058 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-02-09 13:32:18.059  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Process message created at 2022-02-09T13:32:18.059...
+2022-02-09 13:32:18.059  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Delete reviews with ProductID: 1
+2022-02-09 13:32:18.060 DEBUG 707 --- [Test worker] s.m.m.c.r.services.ReviewServiceImpl     : deleteReviews: tries to delete reviews for the product with productId: 1
+2022-02-09 13:32:18.061 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select reviewenti0_.id as id1_0_, reviewenti0_.author as author2_0_, reviewenti0_.content as content3_0_, reviewenti0_.product_id as product_4_0_, reviewenti0_.review_id as review_i5_0_, reviewenti0_.subject as subject6_0_, reviewenti0_.version as version7_0_ from reviews reviewenti0_ where reviewenti0_.product_id=?
+2022-02-09 13:32:18.061 TRACE 707 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-02-09 13:32:18.062  INFO 707 --- [Test worker] s.m.m.c.r.services.MessageProcessor      : Message processing done!
+2022-02-09 13:32:18.087 DEBUG 707 --- [Test worker] org.hibernate.SQL                        : select reviewenti0_.id as id1_0_, reviewenti0_.author as author2_0_, reviewenti0_.content as content3_0_, reviewenti0_.product_id as product_4_0_, reviewenti0_.review_id as review_i5_0_, reviewenti0_.subject as subject6_0_, reviewenti0_.version as version7_0_ from reviews reviewenti0_
+2022-02-09 13:32:18.092  INFO 707 --- [reactor-http-epoll-4] s.m.m.c.r.services.ReviewServiceImpl     : Will get reviews for product with id=213
+2022-02-09 13:32:18.094 DEBUG 707 --- [pool-3-thread-2] org.hibernate.SQL                        : select reviewenti0_.id as id1_0_, reviewenti0_.author as author2_0_, reviewenti0_.content as content3_0_, reviewenti0_.product_id as product_4_0_, reviewenti0_.review_id as review_i5_0_, reviewenti0_.subject as subject6_0_, reviewenti0_.version as version7_0_ from reviews reviewenti0_ where reviewenti0_.product_id=?
+2022-02-09 13:32:18.094 TRACE 707 --- [pool-3-thread-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [213]
+2022-02-09 13:32:18.095 DEBUG 707 --- [pool-3-thread-2] s.m.m.c.r.services.ReviewServiceImpl     : getReviews: response size: 0
+2022-02-09 13:32:18.178  INFO 707 --- [SpringApplicationShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-02-09 13:32:18.179  INFO 707 --- [SpringApplicationShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'review.errorChannel' has 0 subscriber(s).
+2022-02-09 13:32:18.179  INFO 707 --- [SpringApplicationShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2022-02-09 13:32:18.190  INFO 707 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-09 13:32:18.193  INFO 707 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-09 13:32:18.201  INFO 707 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
